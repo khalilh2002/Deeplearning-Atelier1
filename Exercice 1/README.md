@@ -1,3 +1,7 @@
+<img src="./image/1.png"/>
+<img src="./image/2.png"/>
+<img src="./image/3.png"/>
+
 # Stock Price Prediction with Deep Learning using PyTorch
 
 This project explores stock price prediction using a Deep Neural Network (DNN) implemented with PyTorch. The analysis includes Exploratory Data Analysis (EDA), model building, hyperparameter tuning, and comparison of different regularization techniques.
