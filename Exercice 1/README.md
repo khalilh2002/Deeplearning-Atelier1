@@ -1,5 +1,4 @@
 <img src="./image/1.png"/>
-<img src="./image/2.png"/>
 <img src="./image/3.png"/>
 
 # Stock Price Prediction with Deep Learning using PyTorch
