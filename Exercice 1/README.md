@@ -1,13 +1,15 @@
+# screenshots
+
 <img src="./image/1.png"/>
 <img src="./image/3.png"/>
 
 # Stock Price Prediction with Deep Learning using PyTorch
 
-This project explores stock price prediction using a Deep Neural Network (DNN) implemented with PyTorch. The analysis includes Exploratory Data Analysis (EDA), model building, hyperparameter tuning, and comparison of different regularization techniques.
+This is workshop for my uni assiement that explores stock price prediction using a Deep Neural Network (DNN) implemented with PyTorch. 
 
 ## Dataset
 
-The dataset used is the  NYSE dataset, available on Kaggle. It contains historical stock prices for a number of companies traded on the New York Stock Exchange (NYSE) from 2016 to 2017.  The specific file used for this project is `prices.csv`, though the overall dataset includes additional information about company fundamentals.
+prices.csv form https://www.kaggle.com/datasets/dgawlik/nyse
 
 ## 1. Exploratory Data Analysis (EDA)
 
@@ -79,41 +81,3 @@ The following table summarizes the final test losses for each model:
 | L2 Regularized Model         | 7151.8995       |
 | Early Stopping Model         | 7148.8793       |
 
-**Interpretations:**
-
-*   In this specific example, the regularization techniques did not significantly improve the test loss. In some cases, test loss even increased slightly. This could indicate that the initial model wasn't severely overfitting, or that the chosen regularization parameters were not optimal.
-*   **L1 Regularization:** can lead to sparsity (some weights become zero), which can simplify the model.
-*   **L2 Regularization:** penalizes large weights, promoting a smoother model and preventing overfitting.
-*   **Early stopping:** prevents overfitting by stopping training when the performance on the validation set starts to degrade.
-*   Compare the training and test loss curves.  A large gap between training and test loss suggests overfitting.
-*   Regularization techniques are most effective when overfitting is a problem.
-
-## Key Improvements Implemented:
-
-*   **Batch Processing for test data:** Addressing the CUDA memory issue
-*   **CUDA optimization:** for GPU training
-*   **Efficient Data Loaders:** Using `num_workers` and `pin_memory=True`
-*   **NaN Handling:** Includes handling for any NaN during hyperparameter tuning
-*   **ValueError handling:** Includes handling for ValueErrors during testing
-
-## Running the Code
-
-1.  **Install Dependencies:**  Ensure you have the necessary libraries installed.  Run:
-
-    ```bash
-    pip install pandas scikit-learn matplotlib seaborn torch
-    ```
-
-2.  **Download the Dataset:**  Download the `prices.csv` file from the specified Kaggle dataset and place it in the same directory as the `regression.ipynb` notebook.
-
-3.  **Execute the Notebook:** Open `regression.ipynb` in a Jupyter Notebook environment (e.g., Jupyter Lab, Google Colab) and run the cells sequentially.
-
-## Next Steps
-
-*   **Explore More Hyperparameter Combinations:** Expand the range of learning rates, optimizers, batch sizes, and dropout rates in the `hyperparameter_tuning` function.
-*   **Experiment with Different Model Architectures:** Try different numbers of layers, different activation functions (e.g., Sigmoid, Tanh), and different layer sizes.
-*   **Feature Engineering:** Create new features from the existing ones (e.g., moving averages, technical indicators).
-*   **Use a Validation Set:**  Implement a separate validation set to more accurately monitor performance during training and guide early stopping.
-*   **Different Dataset Split:** For time-series data, it is crucial to preserve the temporal order when splitting the data.  Using methods such as timeseries split is important
-
-By completing the previous steps in this guide, one can gain a solid understanding of how to perform the tasks and can help in developing the current work.
