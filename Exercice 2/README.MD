@@ -1,10 +1,17 @@
+
+# screenshots
+
+<img src="./image/1.png"/>
+<img src="./image/2.png"/>
+<img src="./image/3.png"/>
+
+
+
 # Predictive Maintenance Classification with PyTorch
 
-This project aims to predict machine failures using a Deep Neural Network (DNN) implemented in PyTorch. The project includes data preprocessing, model building, hyperparameter tuning using GridSearchCV, and thorough performance evaluation.
 
 ## Dataset
-
-The dataset used is the "Predictive Maintenance" dataset, available on Kaggle. This dataset includes features related to machine conditions and operational processes, along with a target variable indicating whether a failure occurred. The file used for this project is `predictive_maintenance.csv`
+`predictive_maintenance.csv` in https://www.kaggle.com/datasets/dgawlik/nyse
 
 
 ## 1. Exploratory Data Analysis (EDA)
